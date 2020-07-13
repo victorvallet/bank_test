@@ -6,4 +6,7 @@ class BankAccount {
     deposit(money) {
         this.balance += money;
     }
+    withdraw(money) {
+        this.balance -= money;
+    }
 }
