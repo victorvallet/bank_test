@@ -12,4 +12,10 @@ describe('Bank account', () => {
         expect(account.balance).toEqual(0)
     })
 
+    describe('Deposit function', () => {
+        it('Increase the balance by the added amount of £', () => {
+            account.deposit(100)
+            expect(account.balance).toEqual(100)
+        })
+    });
 });
