@@ -1,6 +1,15 @@
 describe('Bank account', () => {
-    it('has an ID number', () => {
-        let account = new BankAccount
-        expect(account.id).toBe
+    var account;
+    beforeEach(() => {
+        account = new BankAccount
+    })
+    it('has a defined and non null ID number', () => {
+        expect(account.id).toBeDefined();
+        expect(account.id).not.toBeNull();
     });
+    it('has an initial balance of £0', () => {
+        expect(account.balance).toBeDefined();
+        expect(account.balance).toEqual(0)
+    })
+
 });
