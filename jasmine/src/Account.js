@@ -18,13 +18,13 @@ class BankAccount {
     }
 
     printStatement() {
-        var rows = ['credit || debit || balance'];
+        var rows = ['date || credit || debit || balance'];
         this.statement.forEach((transaction) => {
-            rows.push(`${transaction.credit} || ${transaction.debit} || ${transaction.balance}`)
+            rows.push(`${transaction.date} || ${transaction.credit} || ${transaction.debit} || ${transaction.balance}`)
         });
 
-        rows.forEach((row) => {
-            return row
+        return rows.forEach((row) => {
+            console.log(row)
         })
     }
 }
