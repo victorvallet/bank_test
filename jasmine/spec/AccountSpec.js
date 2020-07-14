@@ -11,20 +11,4 @@ describe('Bank account', () => {
         expect(account.balance).toBeDefined();
         expect(account.balance).toEqual(0)
     });
-
-    // describe('Deposit function', () => {
-    //     it('Increase the balance by the added amount of £', () => {
-    //         account.deposit(100)
-    //         expect(account.balance).toEqual(100)
-    //     });
-    //     it('Reduces the balance by the withdrawn amount of £', () => {
-    //         account.deposit(300)
-    //         account.deposit(400)
-    //         account.deposit(300)
-    //         account.withdraw(100)
-    //         account.withdraw(200)
-    //         expect(account.balance).toEqual(700)
-
-    //     });
-    // });
 });

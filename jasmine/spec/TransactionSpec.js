@@ -3,7 +3,6 @@ describe('Transaction', () => {
         let account = new BankAccount
         account.deposit(1000)
         account.withdraw(200)
-        expect(account.statement).toContain({ debit: 0, credit: 1000 })
-        expect(account.statement).toContain({ debit: 200, credit: 0 })
+        expect(account.statement).toContain({ debit: 0, credit: 1000 }, { debit: 200, credit: 0 })
     });
 });
