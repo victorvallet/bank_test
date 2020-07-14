@@ -22,7 +22,7 @@ Follow these steps to run the program:
 
 ### Approach
 
-At started with a single BankAccount class but quicly realised another Transaction class could be appropriate. I tried to link them in the most efficient way: when you do an operation on your account, you automatically create a new transaction which is then stored in your bank statement.
+I started with a single BankAccount class but quicly realised another Transaction class could be appropriate. I tried to link them in the most efficient way: when you do an operation on your account, you automatically create a new transaction which is then stored in your bank statement.
 
 ### Code structure
 
