@@ -11,4 +11,7 @@ describe('Bank account', () => {
         expect(account.balance).toBeDefined();
         expect(account.balance).toEqual(0)
     });
+    it('has an initial empty statement', () => {
+        expect(account.statement.length).toEqual(0)
+    })
 });
