@@ -17,7 +17,7 @@ describe('Bank account', () => {
     it('can store multiple transactions', () => {
         account.deposit(1000)
         account.withdraw(200)
-        expect(account.statement).toEqual([{ debit: 0, credit: 1000, balance: 1000 }, { debit: 200, credit: 0, balance: 800 }])
+        expect(account.statement).toEqual([{ debit: 0, credit: 1000, balance: 1000, date: '2020/07/14' }, { debit: 200, credit: 0, balance: 800, date: '2020/07/14' }])
     });
 
 
@@ -41,7 +41,7 @@ describe('Bank account', () => {
         it('returns a summary of past transactions', () => {
             account.deposit(1000)
             account.withdraw(200)
-            expect(account.printStatement()).toMatch(`credit || debit || balance \n 1000 || 0 || 1000 \n 0 || 200 || 800`)
+            expect(account.printStatement()).toMatch(`date || credit || debit || balance \n 1000 || 0 || 1000 || 2020/07/14 \n 0 || 200 || 800 || 2020/07/14`)
         });
     });
 
