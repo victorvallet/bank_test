@@ -1,8 +1,10 @@
 describe('Transaction', () => {
-    it('stores a transaction', () => {
-        let account = new BankAccount
-        account.deposit(1000)
-        account.withdraw(200)
-        expect(account.statement).toContain({ debit: 0, credit: 1000 }, { debit: 200, credit: 0 })
-    });
+
+    it('generates a summary of the transaction that includes debit, credit, balance and date', () => {
+        let transaction = new Transaction
+        expect(transaction.history.debit).toBeDefined()
+        expect(transaction.history.credit).toBeDefined()
+        expect(transaction.history.balance).toBeDefined()
+        expect(transaction.history.date).toBeDefined()
+    })
 });
