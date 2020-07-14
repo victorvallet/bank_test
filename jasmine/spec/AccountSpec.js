@@ -37,5 +37,13 @@ describe('Bank account', () => {
         });
     });
 
+    describe('print statement', () => {
+        it('returns a summary of past transactions', () => {
+            account.deposit(1000)
+            account.withdraw(200)
+            expect(account.printStatement()).toMatch(`credit || debit || balance \n 1000 || 0 || 1000 \n 0 || 200 || 800`)
+        });
+    });
+
 
 });
