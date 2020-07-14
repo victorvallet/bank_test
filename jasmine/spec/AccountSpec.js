@@ -15,9 +15,10 @@ describe('Bank account', () => {
         expect(account.statement.length).toEqual(0)
     });
     it('can store multiple transactions', () => {
+        let today = new Date().toJSON().slice(0, 10).replace(/-/g, '/')
         account.deposit(1000)
         account.withdraw(200)
-        expect(account.statement).toEqual([{ debit: 0, credit: 1000, balance: 1000, date: '2020/07/14' }, { debit: 200, credit: 0, balance: 800, date: '2020/07/14' }])
+        expect(account.statement).toEqual([{ debit: 0, credit: 1000, balance: 1000, date: today }, { debit: 200, credit: 0, balance: 800, date: today }])
     });
 
 
