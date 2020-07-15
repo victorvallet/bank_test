@@ -32,9 +32,9 @@ describe('Bank account', () => {
 
     describe('#withdraw', () => {
         it('decreases the balance by an amount', () => {
+            account.deposit(200)
             account.withdraw(100)
-            expect(account.balance).toBeLessThan(0)
-            expect(account.balance).toEqual(-100)
+            expect(account.balance).toEqual(100)
         });
         it('should throw an error if not enought money on the account', () => {
             expect(() => {
