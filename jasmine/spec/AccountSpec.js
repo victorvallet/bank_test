@@ -28,6 +28,11 @@ describe('Bank account', () => {
             expect(account.balance).toBeGreaterThan(0)
             expect(account.balance).toEqual(300)
         });
+        it('should throw an error if the user try to make a deposit < £20', () => {
+            expect(() => {
+                account.deposit(10)
+            }).toThrowError("Sorry, the minimum amount to make a deposit is £20")
+        });
     });
 
     describe('#withdraw', () => {
