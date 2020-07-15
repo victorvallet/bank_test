@@ -11,6 +11,9 @@ class BankAccount {
         this.statement.push(transaction.history)
     }
     withdraw(money) {
+        if (this.balance < money) {
+            throw new TypeError("Not enough funds, please top up your account!")
+        }
         this.balance -= money
         let transaction = new Transaction()
         transaction.addDebit(money, this.balance)
