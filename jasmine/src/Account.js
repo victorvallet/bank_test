@@ -5,6 +5,9 @@ class BankAccount {
         this.statement = []
     }
     deposit(money) {
+        if (money < 20) {
+            throw new TypeError("Sorry, the minimum amount to make a deposit is £20")
+        }
         this.balance += money
         let transaction = new Transaction()
         transaction.addCredit(money, this.balance)
