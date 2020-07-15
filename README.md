@@ -44,3 +44,9 @@ My code is therefore structured like the following:
 └── .eslintrc
 ```
 
+### Test coverage
+
+The code pass all tests, and has been built on a testing-refactoring process.
+Regarding linting and indenting, the code has been linted thanks to ESlint recommendations.
+
+At this stage, I'm not really sure how to assess test coverage with Jasmine (in process)
