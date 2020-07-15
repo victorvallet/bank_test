@@ -36,6 +36,11 @@ describe('Bank account', () => {
             expect(account.balance).toBeLessThan(0)
             expect(account.balance).toEqual(-100)
         });
+        it('should throw an error if not enought money on the account', () => {
+            expect(() => {
+                account.withdraw(100)
+            }).toThrowError("Not enough funds, please top up your account!")
+        });
     });
 
     describe('print statement', () => {
