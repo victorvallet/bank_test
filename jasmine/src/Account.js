@@ -1,6 +1,5 @@
 class BankAccount {
     constructor() {
-        this.id = Math.floor(Math.random() * 100)
         this.balance = 0
         this.statement = []
     }
@@ -11,7 +10,7 @@ class BankAccount {
         this.balance += money
         let transaction = new Transaction()
         transaction.addCredit(money, this.balance)
-        this.statement.push(transaction.history)
+        this.statement.push(`${transaction.history.date} || ${transaction.history.credit.toFixed(2)} || || ${transaction.history.balance.toFixed(2)}`)
     }
     withdraw(money) {
         if (this.balance < money) {
@@ -20,17 +19,13 @@ class BankAccount {
         this.balance -= money
         let transaction = new Transaction()
         transaction.addDebit(money, this.balance)
-        this.statement.push(transaction.history)
+        this.statement.push(`${transaction.history.date} || || ${transaction.history.debit.toFixed(2)} || ${transaction.history.balance.toFixed(2)}`)
     }
 
     printStatement() {
-        var rows = ['date || credit || debit || balance'];
-        this.statement.forEach((transaction) => {
-            rows.push(`${transaction.date} || ${transaction.credit} || ${transaction.debit} || ${transaction.balance}`)
-        });
+        let result = "date || credit || debit || balance"
+        this.statement.forEach(transaction => result += "\n" + transaction);
 
-        return rows.forEach((row) => {
-            console.log(row)
-        })
+        return result
     }
 }
