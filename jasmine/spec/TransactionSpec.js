@@ -15,6 +15,10 @@ describe('Transaction', () => {
     it('adds some credit if the customer makes a deposit', () => {
         account.deposit(100, transaction = new Transaction);
         expect(transaction.summary.credit).toEqual(100);
+    });
 
+    it('adds some debit if the customer withdraw some money', () => {
+        account.deposit(200, transaction = new Transaction);
+        expect(transaction.summary.debit).toEqual(200);
     });
 });
