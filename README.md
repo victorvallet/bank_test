@@ -26,6 +26,8 @@ I started with a single BankAccount class but quicly realised another Transactio
 
 Besides, I thought it could be useful to prevent deposit under £20 and overdrafts, throwing an error to the customer in those two cases.
 
+I also thought it could make sense to have an auto generated bank account ID but found it hard to implement its uniqueness (that's why I kept the test as skipped for the moment).
+
 ### Code structure
 
 I tried to keep the same structure we used for the Thermostat challenge when we first discovered the Jasmine testing framework. 
