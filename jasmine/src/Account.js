@@ -10,7 +10,7 @@ class BankAccount {
         this.balance += money
         let transaction = new Transaction()
         transaction.addCredit(money, this.balance)
-        this.statement.push(`${transaction.history.date} || ${transaction.history.credit.toFixed(2)} || || ${transaction.history.balance.toFixed(2)}`)
+        this.statement.push(`${transaction.summary.date} || ${transaction.summary.credit.toFixed(2)} || || ${transaction.summary.balance.toFixed(2)}`)
     }
     withdraw(money) {
         if (this.balance < money) {
@@ -19,7 +19,7 @@ class BankAccount {
         this.balance -= money
         let transaction = new Transaction()
         transaction.addDebit(money, this.balance)
-        this.statement.push(`${transaction.history.date} || || ${transaction.history.debit.toFixed(2)} || ${transaction.history.balance.toFixed(2)}`)
+        this.statement.push(`${transaction.summary.date} || || ${transaction.summary.debit.toFixed(2)} || ${transaction.summary.balance.toFixed(2)}`)
     }
 
     printStatement() {
