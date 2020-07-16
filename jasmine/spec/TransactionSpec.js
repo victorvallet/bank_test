@@ -18,7 +18,7 @@ describe('Transaction', () => {
     });
 
     it('adds some debit if the customer withdraw some money', () => {
-        account.deposit(200, transaction = new Transaction);
+        account.withdraw(200, transaction = new Transaction);
         expect(transaction.summary.debit).toEqual(200);
     });
 });

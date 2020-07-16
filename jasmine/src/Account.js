@@ -11,12 +11,11 @@ class BankAccount {
         transaction.addCredit(money, this.balance)
         this.statement.push(`${transaction.summary.date} || ${transaction.summary.credit.toFixed(2)} || || ${transaction.summary.balance.toFixed(2)}`)
     }
-    withdraw(money) {
+    withdraw(money, transaction = new Transaction()) {
         if (this.balance < money) {
             throw new TypeError("Not enough funds, please top up your account!")
         }
         this.balance -= money
-        let transaction = new Transaction()
         transaction.addDebit(money, this.balance)
         this.statement.push(`${transaction.summary.date} || || ${transaction.summary.debit.toFixed(2)} || ${transaction.summary.balance.toFixed(2)}`)
     }
