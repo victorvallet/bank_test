@@ -24,6 +24,8 @@ Follow these steps to run the program:
 
 I started with a single BankAccount class but quicly realised another Transaction class could be appropriate. I tried to link them in the most efficient way: when you do an operation on your account, you automatically create a new transaction which is then stored in your bank statement.
 
+Besides, I thought it could be useful to prevent deposit under £20 and overdrafts, throwing an error to the customer in those two cases.
+
 ### Code structure
 
 I tried to keep the same structure we used for the Thermostat challenge when we first discovered the Jasmine testing framework. 
