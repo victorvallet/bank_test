@@ -3,12 +3,11 @@ class BankAccount {
         this.balance = 0
         this.statement = []
     }
-    deposit(money) {
+    deposit(money, transaction = new Transaction()) {
         if (money < 20) {
             throw new TypeError("Sorry, the minimum amount to make a deposit is £20")
         }
         this.balance += money
-        let transaction = new Transaction()
         transaction.addCredit(money, this.balance)
         this.statement.push(`${transaction.summary.date} || ${transaction.summary.credit.toFixed(2)} || || ${transaction.summary.balance.toFixed(2)}`)
     }
