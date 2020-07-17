@@ -55,8 +55,9 @@ Regarding linting and indenting, the code has been linted thanks to ESlint recom
 
 Regarding test coverage, I used Karma test runner. A test coverage summmary can be found just bellow:
 
-=============================== Coverage summary ===============================
-Statements   : 100% ( 23/23 )
-Branches     : 100% ( 6/6 )
-Functions    : 100% ( 10/10 )
-Lines        : 100% ( 22/22 )
+=======Coverage summary =======
+
+- Statements   : 100% ( 23/23 )
+- Branches     : 100% ( 6/6 )
+- Functions    : 100% ( 10/10 )
+- Lines        : 100% ( 22/22 )
