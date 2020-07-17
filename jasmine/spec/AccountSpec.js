@@ -1,7 +1,9 @@
 describe('Bank account', () => {
     var account;
+    var today;
     beforeEach(() => {
         account = new BankAccount
+        today = new Date().toLocaleDateString()
     })
     xit('has a defined and non null ID number', () => {
         expect(account.id).toBeDefined();
@@ -15,7 +17,6 @@ describe('Bank account', () => {
         expect(account.statement.length).toEqual(0)
     });
     it('can store multiple transactions', () => {
-        let today = new Date().toLocaleDateString()
         account.deposit(1000)
         account.withdraw(200)
         expect(account.statement).toEqual([`${today} || 1000.00 || || 1000.00`, `${today} || || 200.00 || 800.00`])
@@ -50,7 +51,6 @@ describe('Bank account', () => {
 
     describe('print statement', () => {
         it('returns a summary of past transactions', () => {
-            let today = new Date().toLocaleDateString()
             account.deposit(1000)
             account.withdraw(200)
             expect(account.printStatement()).toEqual(`date || credit || debit || balance\n${today} || 1000.00 || || 1000.00\n${today} || || 200.00 || 800.00`)
