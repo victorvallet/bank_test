@@ -1,25 +1,30 @@
 describe('Transaction', () => {
-    var transaction;
     var account;
     beforeEach(() => {
         account = new BankAccount
     })
 
-    xit('generates a summary of the transaction that includes debit, credit, balance and date', () => {
-        expect(transaction.summary.debit).toBeDefined();
-        expect(transaction.summary.credit).toBeDefined();
-        expect(transaction.summary.balance).toBeDefined();
-        expect(transaction.summary.date).toBeDefined();
-    })
-
-    it('adds some credit if the customer makes a deposit', () => {
-        account.deposit(100, transaction = new Transaction);
-        expect(transaction.summary.credit).toEqual(100);
+    describe('#formatDate', () => {
+        it("should return today's date in the appropriate format", () => {
+            account.deposit(300, transaction = new Transaction);
+            expect(transaction.formatDate()).toEqual('17/07/2020')
+        });
     });
 
-    it('adds some debit if the customer withdraw some money', () => {
-        account.deposit(220)
-        account.withdraw(200, transaction = new Transaction);
-        expect(transaction.summary.debit).toEqual(200);
+    describe('#addCredit', () => {
+        it('adds some credit if the customer makes a deposit', () => {
+            account.deposit(100, transaction = new Transaction);
+            expect(transaction.summary.credit).toEqual(100);
+        });
     });
+
+    describe('#addDebit', () => {
+        it('adds some debit if the customer withdraw some money', () => {
+            account.deposit(220)
+            account.withdraw(200, transaction = new Transaction);
+            expect(transaction.summary.debit).toEqual(200);
+        });
+    });
+
+
 });
