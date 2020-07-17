@@ -2,7 +2,7 @@
   "name": "bank_test",
   "version": "1.0.0",
   "description": "### Set up",
-  "main": "index.js",
+  "main": "karma.conf.js",
   "directories": {
     "lib": "lib"
   },
