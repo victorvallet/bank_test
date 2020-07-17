@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/victorvallet/bank_test/issues"
   },
-  "homepage": "https://github.com/victorvallet/bank_test#readme"
+  "homepage": "https://github.com/victorvallet/bank_test#readme",
+  "dependencies": {
+    "karma": "^5.1.0",
+    "karma-coverage": "^2.0.2"
+  }
 }
