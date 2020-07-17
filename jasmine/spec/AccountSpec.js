@@ -50,6 +50,9 @@ describe('Bank account', () => {
     });
 
     describe('print statement', () => {
+        it('returns an empty statement if no transactions yet', () => {
+            expect(account.printStatement()).toEqual('date || credit || debit || balance')
+        });
         it('returns a summary of past transactions', () => {
             account.deposit(1000)
             account.withdraw(200)
