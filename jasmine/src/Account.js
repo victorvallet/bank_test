@@ -26,4 +26,8 @@ class BankAccount {
 
         return result
     }
+
+    checkBalance() {
+        return this.balance;
+    }
 }
