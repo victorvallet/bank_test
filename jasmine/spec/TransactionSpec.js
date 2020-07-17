@@ -1,13 +1,15 @@
 describe('Transaction', () => {
     var account;
+    var today;
     beforeEach(() => {
         account = new BankAccount
+        today = new Date().toLocaleDateString();
     })
 
     describe('#formatDate', () => {
         it("should return today's date in the appropriate format", () => {
             account.deposit(300, transaction = new Transaction);
-            expect(transaction.formatDate()).toEqual('17/07/2020')
+            expect(transaction.formatDate()).toEqual(`${today}`)
         });
     });
 
