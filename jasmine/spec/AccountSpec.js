@@ -25,8 +25,8 @@ describe('Bank account', () => {
     describe('#deposit', () => {
         it('increases the balance by an amount', () => {
             account.deposit(300)
-            expect(account.balance).toBeGreaterThan(0)
-            expect(account.balance).toEqual(300)
+            expect(account.checkBalance()).toBeGreaterThan(0)
+            expect(account.checkBalance()).toEqual(300)
         });
         it('should throw an error if the user try to make a deposit < £20', () => {
             expect(() => {
@@ -39,7 +39,7 @@ describe('Bank account', () => {
         it('decreases the balance by an amount', () => {
             account.deposit(200)
             account.withdraw(100)
-            expect(account.balance).toEqual(100)
+            expect(account.checkBalance()).toEqual(100)
         });
         it('should throw an error if not enought money on the account', () => {
             expect(() => {
