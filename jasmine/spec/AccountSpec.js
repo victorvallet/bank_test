@@ -10,8 +10,7 @@ describe('Bank account', () => {
         expect(account.id).not.toBeNull();
     });
     it('has an initial balance of £0', () => {
-        expect(account.balance).toBeDefined();
-        expect(account.balance).toEqual(0)
+        expect(account.checkBalance()).toEqual(0)
     });
     it('has an initial empty statement', () => {
         expect(account.statement.length).toEqual(0)
