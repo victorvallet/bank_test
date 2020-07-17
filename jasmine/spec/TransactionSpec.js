@@ -15,7 +15,7 @@ describe('Transaction', () => {
         it('adds some credit if the customer makes a deposit', () => {
             account.deposit(100, transaction = new Transaction);
             expect(transaction.summary.credit).toEqual(100);
-            expect(transaction.summary.balance).toEqual(account.balance)
+            expect(transaction.summary.balance).toEqual(account.checkBalance())
         });
     });
 
@@ -25,7 +25,7 @@ describe('Transaction', () => {
             account.withdraw(200, transaction_2 = new Transaction);
             expect(transaction_1.summary).not.toEqual(transaction_2.summary)
             expect(transaction_2.summary.debit).toEqual(200);
-            expect(transaction_2.summary.balance).toEqual(account.balance)
+            expect(transaction_2.summary.balance).toEqual(account.checkBalance())
         });
     });
 
