@@ -53,4 +53,10 @@ My code is therefore structured like the following:
 The code pass all tests, and has been built on a testing-refactoring process.
 Regarding linting and indenting, the code has been linted thanks to ESlint recommendations.
 
-At this stage, I'm not really sure how to assess test coverage with Jasmine (in process)
+Regarding test coverage, I used Karma test runner. A test coverage summmary can be found just bellow:
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 23/23 )
+Branches     : 100% ( 6/6 )
+Functions    : 100% ( 10/10 )
+Lines        : 100% ( 22/22 )
