@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/victorvallet/bank_test#readme",
   "dependencies": {
-    "karma": "^5.1.0",
+    "karma": "^6.3.16",
     "karma-coverage": "^2.0.2",
     "karma-jasmine": "^3.3.1",
     "karma-phantomjs-launcher": "^1.0.4"
